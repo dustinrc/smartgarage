@@ -19,7 +19,7 @@ class Component(object):
 
 class Relay(Component):
 
-    """ unintuitive mapping """
+    # unintuitive mapping
     LIGHT_ON = GPIO.LOW
     LIGHT_OFF = GPIO.HIGH
 
@@ -45,7 +45,7 @@ class Relay(Component):
         There is a built-in software debounce which is actually attempting to mitigate
         a potential ground loop problem."""
 
-        """ validate input """
+        # validate input
 	if color not in [self.red, self.yellow, self.green]:
 	    return
 
