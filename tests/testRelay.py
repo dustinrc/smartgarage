@@ -12,6 +12,7 @@ class TestRelay:
 
     def test_yellow(self):
         self.relay.turn_on_only(self.relay.yellow)
-    
+
     def test_green(self):
         self.relay.turn_on_only(self.relay.green)
+

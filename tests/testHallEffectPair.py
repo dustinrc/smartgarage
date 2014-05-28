@@ -6,3 +6,4 @@ class TestHallEffectPair:
 
     def teardown(self):
         self.halleffectpair.cleanup()
+

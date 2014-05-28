@@ -9,3 +9,4 @@ class TestUSonic:
 
     def test_get_distance(self):
         self.usonic.get_distance()
+

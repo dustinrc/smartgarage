@@ -11,7 +11,7 @@ def ConfigSectionMap(section):
     for option in options:
         try:
             dict1[option] = Config.get(section, option)
-	    if dict1[option] == -1:
+            if dict1[option] == -1:
                 DebugPrint("skip: %s" % option)
         except:
             print("exception on %s!" % option)
@@ -24,4 +24,5 @@ config.read(configfile)
 print config.sections()
 
 if __name__ == "__main__":
-    
+    pass
+

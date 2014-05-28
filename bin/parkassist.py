@@ -42,7 +42,7 @@ def park_assist(channel):
 def wait_for_door():
     halleffectpair = HallEffectPair()
     halleffectpair.add_event_detect(channel=halleffectpair.OPENDOOR, callback=park_assist)
-    
+
     while 1:
         time.sleep(600)
 
@@ -50,3 +50,4 @@ if __name__ == "__main__":
     config = ConfigParser.ConfigParser()
     config.read(configfile)
     wait_for_door()
+

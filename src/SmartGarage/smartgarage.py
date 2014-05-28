@@ -11,7 +11,7 @@ class Component(object):
     def setmode(self, mode):
         """ set the mode of the GPIO board to either BOARD or BCM"""
         GPIO.setmode(mode)
-	
+
     def cleanup(self):
         """ Frees the pins.  This avoids errors if the service is restarted."""
         GPIO.cleanup()
@@ -46,8 +46,8 @@ class Relay(Component):
         a potential ground loop problem."""
 
         """ validate input """
-	if color not in [self.red, self.yellow, self.green]:
-	    return
+        if color not in [self.red, self.yellow, self.green]:
+            return
 
         # software debouce: wait .5 seconds
         sleep(.5)
@@ -66,7 +66,7 @@ class USonic(Component):
         The default board mode is set to GPIO.BCM."""
 
         super(USonic, self).__init__(mode)
-        
+
         self.trigger = trigger
         self.echo = echo
 
@@ -120,3 +120,4 @@ class HallEffectPair(Component):
 
     def add_event_detect(self, channel, callback):
         GPIO.add_event_detect(channel, GPIO.FALLING, callback=callback, bouncetime=1000)
+
